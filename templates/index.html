@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+
+    <main>
+        
+        <section class="foto">
+            <br><br>
+            <h1>Índice de Massa Corporal (IMC)</h1>
+            <br><br>
+        </section>
+
+        <section>
+            <h3 class="tit2">Como funciona</h3>
+            <p>O Índice de Massa Corporal (IMC) é uma medida que 
+                relaciona o peso e a altura de uma pessoa. Ele 
+                é amplamente utilizado como uma ferramenta simples 
+                para identificar possíveis problemas de peso em 
+                adultos, como sobrepeso ou obesidade.</p>
+            <p>O IMC fornece uma estimativa da gordura corporal 
+                de uma pessoa e ajuda a avaliar se o peso está 
+                entro de faixas consideradas saudáveis. No entanto, 
+                ele não leva em consideração outros fatores 
+                importantes, como a composição corporal (por exemplo, 
+                a proporção de massa muscular versus gordura) e a 
+                distribuição de gordura no corpo. Por exemplo, uma 
+                pessoa musculosa pode ter um IMC alto, mas não 
+                necessariamente estar acima do peso.</p>
+        </section>
+
+        <br><br>
+        <center>
+        <section class="calc">
+            <div class="butca">
+                <h2 class="h2calc">Calculadora de IMC</h2>
+                <form action="/resultado" method="post">
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Peso (kg)" step="0.1" type="number" id="peso" name="peso">
+                        <span class="input-border input-border-alt"></span>
+                    </div>
+
+                    <div class="form-control">
+                        <input class="input input-alt" placeholder="Altura (m)" step="0.01" type="number" id="altura" name="altura">
+                        <span class="input-border input-border-alt"></span>
+                    </div><br><br>
+
+                    <button class="botcal" type="submit">Calcular IMC</button><br><br>
+
+                    <div>{{resultado}}</div>
+                </form>
+
+            </div>
+        </section>
+        </center>
+
+        <section class="tabela2">
+            <h2 class="tit2">Tabela de IMC</h2>
+            <center>
+            <div class="imag">
+                <img src="/static/img/imagem.png" alt="Tabela de IMC" width="500px">
+            </div>
+            </center>
+        </section>
+    </main>
+
+</body>
+
+</html>
